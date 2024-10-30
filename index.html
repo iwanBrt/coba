@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feminine Photo Collage Background</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body and Background Setup */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9e8e6;
+            overflow: hidden;
+        }
+
+        /* Container for Collage */
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+            gap: 10px;
+            max-width: 80vw;
+            max-height: 90vh;
+            padding: 20px;
+            background-color: #fceaea;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Style for Each Photo Item */
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Image Style */
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover Effect to Zoom Image */
+        .photo-item:hover img {
+            transform: scale(2.1);
+        }
+
+        /* Animation on Hover */
+        .photo-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heart Overlay on Hover */
+        .photo-item::after {
+            content: "❤";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 5rem;
+            color: rgba(255, 105, 180, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .photo-item:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        /* Centered Video */
+        .center-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px; /* Adjust as needed */
+            height: 300px; /* Keep it square */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling for the video to fill the container */
+        .center-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+     
+    <div class="collage-container">
+        <!-- Add each image here -->
+        <div class="photo-item"><img src="img7.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img1.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img2.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img3.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img4.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img5.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img6.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img7.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img4.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img1.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img2.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img3.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img4.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img5.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img6.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img7.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img3.jpg" alt="Photo 1"></div>
+        <div class="photo-item"><img src="img1.jpg" alt="Photo 1"></div>
+         
+        <div class="center-video">
+            <video src="video2.mp4" autoplay loop muted></video>
+        </div>
+    </div>
+
+     
+    <audio src="audio4.mp3" autoplay loop></audio>
+
+</body>
+</html>
