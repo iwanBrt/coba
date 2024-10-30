@@ -35,6 +35,7 @@
             background-color: #fceaea;
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
             position: relative;
         }
 
@@ -52,12 +53,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
             transition: transform 0.3s ease;
         }
 
         /* Hover Effect to Zoom Image */
         .photo-item:hover img {
-            transform: scale(2.1);
+            transform: scale(1.2);
         }
 
         /* Animation on Hover */
@@ -102,6 +104,38 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 768px) {
+            .collage-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                max-width: 90vw;
+                max-height: 90vh;
+                padding: 15px;
+            }
+
+            .center-video {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .collage-container {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                max-width: 95vw;
+                padding: 10px;
+            }
+
+            .photo-item::after {
+                font-size: 3rem;
+            }
+
+            .center-video {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -129,18 +163,17 @@
         <div class="photo-item"><img src="img5.jpg" alt="Photo 5"></div>
         <div class="photo-item"><img src="img6.jpg" alt="Photo 6"></div>
         <div class="photo-item"><img src="img7.jpg" alt="Photo 7"></div>
-        
+
 
         <div class="center-video">
             <video src="video2.mp4" autoplay loop muted></video>
         </div>
     </div>
-
+    
     <div class="music-container">
         <audio autoplay loop>
             <source src="audio4.mp3" type="audio/mp3">
         </audio>
     </div>
-
 </body>
 </html>
